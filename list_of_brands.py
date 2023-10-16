@@ -1,0 +1,17 @@
+clothing_brands = [
+  " Nike", 
+  "Adidas",
+  "Under Armour",
+  " Vans",
+  " Gucci",
+  " Louis Vuitton",
+  " Fila",
+  " Balenciaga",
+  " Zara",
+  " H&M",
+  " Tiffany & Co.",
+  " Fashion Nova",
+  " Dior",
+  " Chanel",
+  " Victoria's Secret",
+  " Tommy Hilfiger"]
