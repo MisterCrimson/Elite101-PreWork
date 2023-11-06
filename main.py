@@ -25,7 +25,7 @@ name = input('before we get started let me get your name so i we can connect bet
 
 time.sleep(1)
 print(f' Hello {name} im called Friday and it is very nice to meet you!')
-age = int(input('my last question for you before we get started is "how old are you?"'))
+age = int(input('my last question for you before we get started is how old are you?  '))
 
 time.sleep(1)
 if age <= 18:
@@ -61,6 +61,7 @@ elif conversation1 == '3' or conversation1 == '3.':
 
 else:
   print('...Uh oh can you try again  from the start with one of the available numbers?')
+  exit()
 
 #used to specify what clothing item is being dealt with
 clothingid = input('please list the type of clothing you want to return here. -->  ')
@@ -85,7 +86,7 @@ elif clothingid == 'jacket' or clothingid == 'Jacket' :
 else:
   print('...Uh oh can you try again and pick from a shirt,pants, shoes, or a jacket?')
 
-while counter <= 0:
+while counter <= 2:
     
   #used to get the brand of the item from a seperate list
   brandid = input(f"Now may you please enter the brand of the {clothingid} here -->  ")
@@ -93,27 +94,30 @@ while counter <= 0:
   
   #used to get the entire product from a seperate list
   if brandid == 'adidas'.lower:
-    print(shoes.Adidas_brands[0])
-    print(shoes.Adidas_brands[1])
-    print(shoes.Adidas_brands[2])
+    for item in shoes.Adidas_brands:
+      print(item)
+      time.sleep(0.5)
+    
   
   elif brandid == 'nike'.lower:
-    print(shoes.Nike_brands[0])
-    print(shoes.Nike_brands[1])
-    print(shoes.Nike_brands[1])
+    for item in shoes.Nike_brands:
+      print(item)
+      time.sleep(0.5)
+    
   
   elif brandid == 'under armour'.lower:
-    print(shoes.Under_Armour_brands[0])
-    print(shoes.Under_Armour_brands[1])
-    print(shoes.Under_Armour_brands[2])
+    for item in shoes.Under_Armour_brands:
+      print(item)
+      time.sleep(0.5)
   
   elif brandid == 'vans'.lower:
-    print(shoes.Vans_brands[0])
-    print(shoes.Vans_brands[1])
-    print(shoes.Vans_brands[2])
+    for item in shoes.Vans_brands:
+      print(item)
+      time.sleep(0.5)
+    
   
   #used to get cost of the item
-  priceid = int(input(f' please enter the price of your {clothingid} here --> $'))
+  priceid = float(input(f' please enter the price of your {clothingid} here --> $'))
   time.sleep(0.5)
   
   print('we are looking for products that match your current selections' 
@@ -173,7 +177,7 @@ while counter <= 0:
     print(shoes.Vans_brands[2])
     
   #used to get cost of the item
-  priceid2 = int(input(f' please enter the price of your {clothingid} here --> $'))
+  priceid2 = float(input(f' please enter the price of your {clothingid} here --> $'))
   time.sleep(0.5)
   
   print('we are looking for products that match your current selections' 
@@ -182,7 +186,7 @@ while counter <= 0:
   
   if priceid == priceid2:
     print(' we are prepared to reimburse you as soon as you come in')
-    counter += 2
+    counter += 4
   
   #if the item being return is worth less than what they want to exchange it for 
   #the user will be asked to try again
@@ -193,6 +197,6 @@ while counter <= 0:
   
   else:
     print(' we are prepared to reimburse you with your item and change when you come in')
-    counter += 2
+    counter += 4
 
 exit()
